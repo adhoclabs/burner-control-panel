@@ -1,0 +1,122 @@
+<% include ../partials/header.ejs %>
+
+
+<div class="row">
+
+  <div id="control-panel" class="small-10 small-centered medium-8 medium-centered large-6 large-centered columns">
+
+    <div class="row align-middle panel-header">
+
+      <div class="small-7 medium-7 large-8 columns">
+        <h5>Configure your Burner Settings</h5>
+      </div>
+
+      <div class="columns right-align">
+        <button class="btn" data-clipboard-text="<%= phone %>"><%= phone %></button>
+      </div>
+
+    </div>
+
+    <div class="row configure-row-one-line">
+      <div class="small-6 columns switch-label-container">
+        <div class="switch-label-content">Burner Name</div>
+      </div>
+
+      <div class="columns text-right">
+        <input id="name" type="text" placeholder="" name="name" value="<%= burner.name %>">
+      </div>
+    </div>
+
+    <div class="row configure-row-one-line">
+      <div class="small-6 columns switch-label-container">
+        <div class="switch-label-content">Ringer</div>
+      </div>
+
+      <div class="columns text-right">
+        <div class="switch large">
+          <input class="switch-input" id="ringer" type="checkbox" name="ringer" <% if (burner.ringer) { %>checked<% } %>>
+          <label class="switch-paddle" for="ringer">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row configure-row-one-line">
+      <div class="small-6 columns switch-label-container">
+        <div class="switch-label-content">Notifications</div>
+      </div>
+
+      <div class="columns text-right">
+        <div class="switch large">
+          <input class="switch-input" id="notifications" type="checkbox" name="notifications" <% if (burner.notifications) { %>checked<% } %>>
+          <label class="switch-paddle" for="notifications">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row configure-row-one-line">
+      <div class="small-9 columns switch-label-container">
+        <div class="switch-label-content">Use <span class="phone-label"><%= phone %></span> for Caller ID</div>
+      </div>
+
+      <div class="columns text-right">
+        <div class="switch large">
+          <input class="switch-input" id="callerIdEnabled" type="checkbox" name="callerIdEnabled" <% if (!burner.callerIdEnabled) { %>checked<% } %>>
+          <label class="switch-paddle" for="callerIdEnabled">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row configure-row-one-line">
+      <div class="small-9 columns switch-label-container">
+        <div class="switch-label-content">Color</div>
+      </div>
+
+      <div class="columns">
+        <div class="row align-right">
+          <div class="columns color-button">
+            <label>Change</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="color-picker" class="row">
+
+      <div class="small-12 columns">
+
+        <% include ../partials/colors.ejs %>
+        
+      </div>
+
+    </div>
+
+    <div class="row configure-row-one-line top-radius-only">
+      <div class="small-6 columns switch-label-container">
+        <div class="switch-label-content">Auto-reply to texts</div>
+      </div>
+
+      <div class="columns text-right">
+        <div class="switch large">
+          <input class="switch-input" id="autoReplyActive" type="checkbox" name="autoReplyActive" <% if (burner.autoReplyActive) { %>checked<% } %>>
+          <label class="switch-paddle" for="autoReplyActive">
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row configure-row-grouped">
+
+      <div class="small-12 columns text-right">
+        <textarea id="autoReplyText"><%= burner.autoReplyText %></textarea>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,4 @@
+CALLBACK_URL="http://localhost:5000/oauth/callback"
+CLIENT_ID="YOUR CLIENT ID"
+CLIENT_SECRET="YOUR CLIENT SECRET"
+SCOPE="burners:read,burners:write"
