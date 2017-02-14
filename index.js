@@ -59,7 +59,7 @@ Express setup
 app.use(cookieParser());
 app.use(cookieSession({
   name: 'session',
-  keys: ["RlQLK7RoJY9rT78IV9Kx2G75lRlXeA2H"],
+  keys: ["YOUR RANDOM KEY HERE"], // http://randomkeygen.com
   maxAge: 12 * 60 * 60 * 1000 // 12 hours 
 }));
 
