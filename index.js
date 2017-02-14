@@ -32,9 +32,9 @@ var phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
 Oauth config
 *****************/
 
-var BASE_URL="http://api.burnerapp.com"
-var ACCESS_TOKEN_URL="http://api.burnerapp.com/oauth/access"
-var AUTH_URL="http://app.burnerapp.com/oauth/authorize"
+var BASE_URL="https://api.burnerapp.com"
+var ACCESS_TOKEN_URL="https://api.burnerapp.com/oauth/access"
+var AUTH_URL="https://app.burnerapp.com/oauth/authorize"
 
 var ClientOAuth2 = require('client-oauth2');
 
