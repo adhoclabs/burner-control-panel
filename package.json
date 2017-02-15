@@ -16,6 +16,7 @@
     "clipboard": "^1.5.16",
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-alpha.2",
+    "dotenv": "^4.0.0",
     "ejs": "2.4.1",
     "express": "4.13.3",
     "foundation-sites": "^6.3.0",

@@ -27,6 +27,7 @@ var path = require('path');
 var url = require('url');
 var PNF = require('google-libphonenumber').PhoneNumberFormat;
 var phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
+require('dotenv').config()
 
 /****************
 Oauth config

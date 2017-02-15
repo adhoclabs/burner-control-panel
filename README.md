@@ -17,7 +17,7 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
 $ git clone git@github.com:adhoclabs/burner-control-panel.git # or clone your own fork
-$ cd node-js-getting-started
+$ cd burner-control-panel 
 $ npm install
 $ npm start
 ```
